@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "outfit";
+  font-size: 62.5%;
+}
+
+.main-view {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(215, 51%, 70%);
+}
+.nft-card {
+  width: 28rem;
+  height: 45rem;
+  border-radius: 11px;
+  padding: 2rem 2rem;
+  background-color: hsl(216, 50%, 16%);
+  display: grid;
+  grid-template-rows: 2fr 1fr 0.5fr;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.nft-img-box {
+  position: relative;
+  transition: all 0.5s;
+}
+
+.nft-img {
+  height: 24rem;
+  border-radius: 11px;
+  /* overflow: hidden; */
+  opacity: 1;
+  transition: all 0.5s;
+}
+.nft-icon-box {
+  background-color: hsla(178, 100%, 80%, 0.351);
+  height: 24rem;
+  width: 24rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 11px;
+  opacity: 0;
+  /* overflow: hidden; */
+  transition: all 0.5s;
+}
+.nft-icon {
+  opacity: 0;
+  height: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+}
+
+.nft-img-box:hover .nft-img {
+  opacity: 0.3;
+}
+
+.nft-img-box:hover .nft-icon {
+  opacity: 1;
+}
+.nft-img-box:hover .nft-icon-box {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.nft-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.nft-name:link,
+.nft-name:visited {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.nft-name:hover,
+.nft-name:active {
+  color: hsl(178, 100%, 50%);
+}
+
+.nft-description {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.price-time-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.time-box,
+.price-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nft-price {
+  color: hsl(178, 100%, 50%);
+  font-size: 1.2rem;
+}
+.price-box img {
+  height: 1.2rem;
+}
+.time-box img {
+  height: 1.2rem;
+}
+
+.nft-time {
+  font-size: 1.2rem;
+}
+.nft-creator {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.creator-img {
+  height: 2.4rem;
+  border: solid 0.1px hsl(0, 0%, 100%);
+  border-radius: 10000px;
+}
+.creator-info {
+  font-size: 1.3rem;
+}
+
+span {
+  color: hsl(0, 0%, 100%);
+  transition: all 0.5s;
+}
+span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+hr {
+  background: hsl(215, 32%, 27%);
+  border: none;
+  height: 0.08rem;
+}
